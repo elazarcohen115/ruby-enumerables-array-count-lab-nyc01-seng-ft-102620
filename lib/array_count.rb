@@ -1,11 +1,13 @@
-def count_strings(array)
-  array.count do |each|
-    each.is_a? String
-  end
-    #{ |each| is_a? String }
+def count_strings(array) {|each| each.is_a? String}
+
+    #
   # Return the total number of strings in the provided array using the count enumerable
 end
 
 def count_empty_strings(array)
+  array.count do |each|
+    each == ""
+  end
+
   # Return the total number of EMPTY strings in the provided array using the count enumerable
 end
